@@ -1,0 +1,170 @@
+.promo__container {
+    position: relative;
+    margin-top: -66px;
+
+    @media (min-width: @tablet-width) {
+        margin-top: -110px;
+    }
+
+    @media (min-width: @desktop-width) {
+        
+    }
+}
+.promo__wrapper {
+    height: 462px;
+    background-color: @promo-color;
+    background-image: url('../../img/promo/screen.jpg'),
+                      url('../../img/promo/phone.png'),
+                      url('../../img/promo/back-mobile.jpg');
+    background-repeat: no-repeat,
+                       no-repeat,
+                       no-repeat;
+    background-size: 111px 197px,
+                     320px 286px,
+                     320px 462px;
+    background-position: center 209px,
+                         center 176px,
+                         center top;
+
+    @media (min-width: @tablet-width) {
+        height: 729px;
+        background-image: url('../../img/promo/tablet/screen.png'),
+                          url('../../img/promo/tablet/phone.png'),
+                          url('../../img/promo/tablet/back-tablet.jpg');
+        background-size: 195px 346px, 660px 545px, 660px 729px;
+        background-position: 371px 237px,
+                             center 184px,
+                             center top;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../../img/promo/tablet/screen-2x.jpg'),
+                          url('../../img/promo/tablet/phone-2x.png'),
+                          url('../../img/promo/tablet/back-tablet-2x.jpg');
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 853px;
+        background-image: url('../../img/promo/desktop/screen.jpg'),
+                          url('../../img/promo/desktop/phone.png'),
+                          url('../../img/promo/desktop/back-desktop.jpg');
+        background-size: 230px 408px, 1050px 645px, 1200px 853px;
+        background-position: 720px 273px,
+                            right bottom,
+                            center top;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../../img/promo/desktop/screen@2x.jpg'),
+                          url('../../img/promo/desktop/phone@2x.png'),
+                          url('../../img/promo/desktop/back-desktop@2x.jpg');
+        }
+    }
+}
+
+.promo__slogan {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+
+    @media (min-width: @tablet-width) {
+        top: 204px;
+        left: 20px;
+        transform: translateX(0);
+        width: 300px;
+        box-sizing: border-box;
+        padding: 0 30px;
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 120%
+    }
+
+    @media (min-width: @desktop-width) {
+        left: 131px;
+        top: 209px;
+        font-size: 50px;
+        line-height: normal;
+    }
+}
+
+.promo__description {
+    background-color: @promo-color;
+    padding: 28px 20px 30px 20px;
+
+    @media (min-width: @tablet-width) {
+        position: absolute;
+        background-color: transparent;
+        top: 378px;
+        left: 20px;
+        width: 300px;
+        padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+        top: 450px;
+        left: 129px;
+    }
+}
+
+.promo__button {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    border-radius: 29px;
+    width: 100%;
+    background-color: inherit;
+    padding: 16px;
+    border: 3px solid #ffffff;
+    color: #FFF;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: initial;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ffffff;
+        color: @red-color;
+    }
+
+    &:active {
+        color: rgba(210, 40, 86, 0.3);
+    }
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 46px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 21px;
+        margin-bottom: 67px;
+    }
+}
+
+.promo__text {
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 18px;
+    }
+}

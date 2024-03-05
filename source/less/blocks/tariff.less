@@ -1,0 +1,27 @@
+
+.tariff__container {
+    width: 320px;
+    padding: 81px 0 50px 0;
+    box-sizing: border-box;
+    background-color: @light-gray;
+    overflow: hidden;
+
+    @media (min-width: @tablet-width) {
+        width: @tablet-width;
+        padding: 112px 20px 68px 20px;
+        background-color: transparent;
+        background-image: url(../../img/tariff/grey-background.svg);
+    }
+
+    @media (min-width: @desktop-width) {
+        width: @desktop-width;
+        padding: 158px 130px 94px 130px;
+        background-image: url(../../img/tariff/background-desktop.svg);
+    }
+}
+
+.tariff__pagination {
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+}

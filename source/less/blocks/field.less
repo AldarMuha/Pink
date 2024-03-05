@@ -1,0 +1,120 @@
+.field {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @media (min-width: @tablet-width) {
+        grid-template-columns: min-content 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+.field__title {
+    color: @red-color;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
+    padding-left: 21px;
+}
+
+.field__input {
+    width: 276px;
+    box-sizing: border-box;
+    padding: 16px 20px 18px 20px;
+    border-radius: 1px;
+    border: 2px solid #E5E5E5;
+    color: @text-color;
+    font-family: @font-family;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 13px;
+
+    @media (min-width: @tablet-width) {
+        width: 100%;
+    }
+}
+
+.field--no-label .field__input {
+    width: 280px;
+    padding: 22px 20px;
+    box-sizing: border-box;
+    border-radius: 1px;
+    border: 2px solid #E5E5E5;
+    color: @text-color;
+    font-family: @font-family;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+
+    @media (min-width: @tablet-width) {
+        width: 100%;
+    }
+}
+
+.field__input--contacts{
+    @media (min-width: @tablet-width) {
+        grid-row: 1/2;
+    }
+}
+
+.field__input--phone{
+    @media (min-width: @tablet-width) {
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 59px;
+            height: 100%;
+            background-color: #E5E5E5;
+            background-image: url(../../img/icons/phone.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+.field__input--contacts .field__input {
+    @media (min-width: @tablet-width) {
+        width: 496px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 371px;
+    }
+}
+
+.field__input--email {
+    @media (min-width: @tablet-width) {
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 59px;
+            height: 100%;
+            background-color: #E5E5E5;
+            background-image: url(../../img/icons/mail.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.field__title--contacts {
+    @media (min-width: @tablet-width) {
+        padding-left: 8px;
+    }
+}
+
+.field--contacts {
+    @media (min-width: @tablet-width) {
+        grid-template-columns: 1fr;
+    }
+}

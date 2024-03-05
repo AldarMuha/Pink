@@ -1,0 +1,73 @@
+.field-group {
+    padding: 37px 20px 42px 20px;
+    box-sizing: border-box;
+    border: none;
+    @media (min-width: @tablet-width) {
+        border: 2px solid #E5E5E5;
+        padding: 35px 60px 40px 60px;
+    }
+}
+
+.field-group__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    @media (min-width: @desktop-width) {
+        gap: 56px;
+    }
+}
+
+.field-group__item:first-child {
+    @media (min-width: @desktop-width) {
+        margin-bottom: 2px;
+    }
+}
+
+.field-group__title {
+    margin: 0 auto;
+    max-width: 230px;
+    color: @red-color;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px; 
+    text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+        max-width: 500px;
+    }
+}
+
+.field-group__title--contacts {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+    }
+}
+
+.form__group--achievement .field-group__list {
+    gap: 44px;
+}
+
+
+
+.form__group--gadgets .field-group__list {
+    gap: 35px;
+
+    @media (min-width: @desktop-width) {
+        gap: 39px;
+    }
+}
+
+.form__group--contacts .field-group__list {
+    @media (min-width: @desktop-width) {
+        grid-template-columns: repeat(2, 371px);
+        gap: 74px;
+    }
+}

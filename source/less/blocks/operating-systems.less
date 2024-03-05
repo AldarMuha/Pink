@@ -1,0 +1,42 @@
+.operating-systems__list {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    align-items: baseline;
+    justify-content: center;
+    grid-template-columns: repeat(3, max-content);
+    gap: 35px;
+
+    @media (min-width: @tablet-width) {
+        align-items: center;
+        justify-content: left;
+        margin-left: 46px;
+        margin-bottom: 33px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 50px;
+        margin-left: 50px;
+        align-items: flex-end;
+    }
+}
+
+.operating-systems__item:not(.operating-systems__item:first-child){
+    padding-bottom: 3px;
+}
+
+.operating-systems__icon {
+    display: block;
+}
+
+.operating-systems__link {
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}

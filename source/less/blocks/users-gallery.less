@@ -1,0 +1,107 @@
+
+.users-gallery__description {
+    padding: 44px 20px 50px 20px;
+
+    @media (min-width: @tablet-width) {
+        padding: 91px 20px 90px 20px;
+    }
+}
+
+.users-gallery__text {
+    margin: 0 auto;
+    color: @text-color;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+
+    @media (min-width: @tablet-width) {
+        max-width: 500px;
+        font-size: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+        max-width: 600px;
+    }
+}
+
+.users-gallery__text br {
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+    @media (min-width: @desktop-width) {
+        display: block;
+    }
+}
+
+.users-gallery__sublist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 320px;
+    gap: 20px;
+
+    @media (min-width: @tablet-width) {
+        padding: 0 20px;
+        grid-template-columns: repeat(2, 300px);
+        gap: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 0 130px 0 130px;
+        grid-template-columns: repeat(3, 300px);
+        column-gap: 20px;
+        row-gap: 54px;
+    }
+}
+
+.users-gallery__item {
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+        padding: 0;
+    }
+}
+
+.users-gallery__item--panorama {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+
+    &::before {
+        content: "Панорама дня";
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 140px;
+        min-height: 36px;
+        background-color: @red-color;
+        color: #ffffff;
+        text-align: center;
+        font-family: @font-family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        text-transform: uppercase;
+        @media (min-width: @tablet-width) {
+            top: 57px;
+        }
+        @media (min-width: @desktop-width) {
+            top: 54px;
+            right: 130px;
+        }
+    }
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 50px;
+    }
+}
+
+.users-gallery__image {
+    display: block;
+}

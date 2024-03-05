@@ -1,0 +1,127 @@
+.effect {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+    }
+}
+
+.effect__container {
+    position: relative;
+    padding: 96px 20px 29px 330px;
+    box-sizing: border-box;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54px;
+        left: 20px;
+        width: 238px;
+        height: 276px;
+        background-image: url(../../img/icons/timer.svg);
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        content: "24";
+        position: absolute;
+        top: 126px;
+        left: 54px;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        outline: 16px solid @red-color;
+        text-align: center;
+        color: @red-color;
+        font-family: @font-family;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 163px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 162px 166px 109px 500px;
+        background-color: @light-gray;
+
+        &::before {
+            top: 70px;
+            left: 131px;
+            width: 298px;
+            height: 345px;
+            background-image: url(../../img/icons/timer-desktop.svg);
+        }
+
+        &::after {
+            display: block;
+            top: 158px;
+            left: 172px;
+            width: 216px;
+            height: 216px;
+            outline: 18px solid @red-color;
+            font-size: 120px;
+            line-height: 205px;
+        }
+    }
+}
+
+.effect__heading {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #000000;
+    font-family: @font-family;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+
+    @media (min-width: @desktop-width) {
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
+}
+
+.effect__heading br {
+    @media (min-width: @desktop-width) {
+        display: none;
+    }
+}
+
+.effect__text {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 2px;
+    color: @text-color;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 33px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.effect__text br {
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
+    
+    @media (min-width: @desktop-width) {
+        display: block;
+    }
+}
+
+
+.effect__link {
+    color: #D22856;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; 
+
+    @media (min-width: @desktop-width) {
+        font-size: 18px;
+    }
+}
+

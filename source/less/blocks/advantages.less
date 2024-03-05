@@ -1,0 +1,238 @@
+.advantages__wrapper {
+    position: relative;
+    padding: 55px 20px 318px 20px;
+    background-color: @light-gray;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 475px;
+        left: 50%;
+        width: 157px;
+        height: 320px;
+        transform: translateX(-50%);
+        background-image: url(../../img/advantages/iphone-screen.png),
+                          url(../../img/advantages/iphone.png);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 136px 245px, 157px 320px;
+        background-position: 10px 37px, center;
+        overflow: hidden;
+    }
+
+    @media (min-width: @tablet-width) {
+        background-image: url(../../img/advantages/grey-background.svg);
+        background-size: 660px 695px;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        padding: 103px 20px 33px 330px;
+
+        &::before {
+            top: 28px;
+            left: 20px;
+            transform: translateX(0);
+            width: 268px;
+            height: 547px;
+            background-image: url(../../img/advantages/tablet/iphone-screen.jpg),
+                              url(../../img/advantages/tablet/iphone.png);
+            background-repeat: no-repeat, no-repeat;
+            background-size: 237px 432px, 268px 547px;
+            background-position: center, center;
+            @media (min-resolution: 2dppx) {
+                background-image: url(../../img/advantages/tablet/iphone-screen@2x.jpg),
+                                  url(../../img/advantages/tablet/iphone@2x.png);
+            }
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        background-size: 1200px 715px;
+        background-image: url(../../img/advantages/desktop/grey-background.svg);
+        background-repeat: no-repeat;
+        padding: 0 154px 0 154px;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.advantages__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: @desktop-width) {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 68px;
+    }
+}
+
+.advantages__item {
+    @media (min-width: @desktop-width) {
+        position: relative;
+        padding-top: 306px;
+        overflow: hidden;
+
+        &:first-child {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 50%;
+                width: 186px;
+                height: 301px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-1.png");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url(../../img/advantages/desktop/iphone-1@2x.png);
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 47px;
+                left: 50%;
+                width: 165px;
+                height: 259px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-screen-1.jpg");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url("../../img/advantages/desktop//iphone-screen-1@2x.jpg");
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 50%;
+                width: 186px;
+                height: 301px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-2.png");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url("../../img/advantages/desktop/iphone-2@2x.png");
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 47px;
+                left: 50%;
+                width: 165px;
+                height: 259px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-screen-2.jpg");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url("../../img/advantages/desktop/iphone-screen-2@2x.jpg");
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 50%;
+                width: 186px;
+                height: 301px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-3.png");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url("../../img/advantages/desktop/iphone-3@x.png");
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 47px;
+                left: 50%;
+                width: 165px;
+                height: 259px;
+                transform: translateX(-50%);
+                background-image: url("../../img/advantages/desktop/iphone-screen-3.jpg");
+
+                @media (min-resolution: 2dppx) {
+                    background-image: url("../../img/advantages/desktop/iphone-screen-3@2x.jpg");
+                }
+            }
+        }
+    }
+}
+
+.advantages__subheading {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    color: #000;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 14px;
+
+    @media (min-width: @tablet-width) {
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 0 10px;
+        text-align: center;
+        margin-top: 59px;
+        margin-bottom: 22px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.advantages__text {
+    margin: 0 auto;
+    min-height: 58px;
+    margin-bottom: 37px;
+    color: @text-color;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 38px;
+        text-align: left;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 0;
+        padding: 0 4px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+.advantages__text br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+        display: none;
+    }
+}
+
+.advantages__item:last-child .advantages__text{
+    margin-bottom: 0;
+}

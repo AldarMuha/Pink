@@ -1,0 +1,54 @@
+.slogan__container {
+    position: relative;
+    padding: 42px 20px 64px 20px;
+    min-height: 250px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 320px;
+        height: 32px;
+        background-image: linear-gradient(to bottom right, transparent 50%, #f2f2f2 50%);
+    }
+
+    @media (min-width: @tablet-width) {
+        min-height: 216px;
+        padding: 46px 36px 0 36px;
+        justify-content: flex-start;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 62px 210px 48px 210px;
+    }
+}
+
+.slogan__text {
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #283645;
+    text-align: center;
+    font-family: @font-family;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; 
+
+    @media (min-width: @tablet-width) {
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 50px;
+    }
+}

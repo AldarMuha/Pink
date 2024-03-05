@@ -1,0 +1,30 @@
+.developer {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    color: @red-color;
+    font-family: @font-family;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none;
+    &:hover {
+        color: @text-color;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    @media (min-width: @desktop-width) {
+        color: #283645;
+        font-size: 18px;
+    }
+
+}
+
+.developer:hover .developer__image {
+    fill: @text-color;  
+}

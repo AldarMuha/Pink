@@ -1,0 +1,67 @@
+.control {
+    display: grid;
+    align-items: center;
+}
+
+.control--checkbox {
+    grid-template-columns: 39px 1fr;
+    gap: 20px;
+}
+
+.control--radio {
+    grid-template-columns: 41px 1fr;
+    gap: 29px;
+}
+
+.control__input {
+    display: none;
+}
+
+.control__mark {
+    position: relative;
+    background-color: #ffffff;
+    border: 2px solid #E5E5E5;
+}
+
+.control--checkbox .control__mark {
+    width: 35px;
+    height: 35px;
+    border-radius: 1px;
+}
+
+.control--radio .control__mark {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+
+.control__text {
+    color: @text-color;
+    font-family: @font-family;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+input[type="checkbox"]:checked + .control__mark::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 16px;
+    background-image: url(../../img/icons/tick.svg);
+}
+
+input[type="radio"]:checked + .control__mark::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: @red-color;
+    border-radius: 50%;
+}

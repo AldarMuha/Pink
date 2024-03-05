@@ -1,0 +1,135 @@
+.main-nav {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+        width: @tablet-width;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: @desktop-width;
+        display: flex;
+        align-items: flex-end;
+        background-color: rgba(1, 1, 1, 0.3);
+        box-sizing: border-box;
+        padding: 27px 130px 43px 130px;
+        z-index: 2;
+    }
+}
+
+.main-nav__logo {
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.main-nav__logo img {
+    display: block;
+}
+
+.main-nav__bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.3);
+    box-sizing: border-box;
+    padding: 21px 20px;
+
+    @media (min-width: @tablet-width) {
+        padding: 27px 20px 43px 20px;
+        align-items: flex-end;
+    }
+
+    @media (min-width: @desktop-width) {
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+.main-nav--opened .main-nav__bar {
+    background-color: @menu-color;
+    box-shadow: 0px 1px 0px 0px #000, 0px 1px 0px 0px rgba(255, 255, 255, 0.15) inset;
+}
+
+.main-nav__toggle {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    @media (min-width: @desktop-width) {
+        display: none;
+    }
+}
+
+.main-nav--closed .main-nav__toggle {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+    }
+}
+
+.main-nav--opened .main-nav__toggle {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../img/icons/close-button.svg);
+}
+
+.main-nav--opened .main-nav__toggle-bar {
+    display: none;
+}
+
+.main-nav__toggle-bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+}
